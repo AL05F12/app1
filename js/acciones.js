@@ -56,6 +56,7 @@ $(document).ready(function(e){
 	
 	function buscarAutor (Quien)
 {
+	alert("funcioba");
 	//datos a mandar
 	datos="Autor="+Quien;
 	$.ajax({
@@ -64,8 +65,10 @@ $(document).ready(function(e){
 		data: datos	
 	}).done (function(msg){
 		var DatosLibros = JSON.parse(msg);
+		alert(msg);
 		if(DatosLibros.datos == 1)
 		{
+			alert("datos");
 			$('#liAutor').empty();
 			for(var i=0;i<DatosLibros.libros.length;i++)
 			{
