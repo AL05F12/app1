@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+               
+        
+        <link href="css/jquery.mobile.structure-1.3.2.min.css" rel="stylesheet">
+        <link href="css/biblio.min.css" rel="stylesheet">
+    
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script src="js/acciones.js"></script>        
+        
+
+       <script src="phonegap.js"></script>            
+
+        <!-- necesario*/ -->
+    </head>
+    
+    <body >
+  <div data-role="page" id="principal" data-theme="a" >
+  	<div data-role="header" data-position="fixed" id="cab">
+        <h1>BIENVENIDO</h1>
+     </div>   
+     
+	<div data-role="content" style="background-image:url(recursos/imagenes/biblioteca.png); background-repeat:no-repeat; background-size: cover;" id="javi">	
+
+ <div align="center">
+<h1 align="center"> Selecciona el tipo de busqueda que quieras consultar</h1>
+<br>
+   
+    <div style="width:50%;">
+<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false">
+<h1> Consultas </h1>
+<div> <a href="#" data-role="button" id="buscar_todos">BIBLIOTECA </a>
+ <a href="#autor" data-role="button" id="buscar_autor">AUTORES </a>
+ <a href="#editor" data-role="button">EDITORIALES </a>
+ <a href="#genero" data-role="button">GENEROS </a>
+</div>
+</div>
+
+
+
+        </div>
+</div>
+</div>
+	<div data-role="footer"  data-position="fixed" id="pie">
+		<h4>BIBLIOTECA</h4>
+	</div>
+        
+</div>
+
+<!--{AUTOR}-->
+<div data-role="page" id="autor" data-theme="a">
+	<div data-role="header">
+		<h1>AUTORES</h1>
+        <div align="center">
+        <a href="#principal" data-role="button" data-icon="libros" data-iconpos="notext" data-inline="true">Menú</a>
+        </div>  
+	</div>
+	<div data-role="content" >	
+    <div id="busqueda_autor" align="center">
+    
+    <div align="center">
+    <div style="width:50%">
+    
+         Elige tu Autor:
+         <br>
+		<input type="text" name="txtautor" placeholder="Autor" >
+        <br>
+        <br>
+      
+        <button type="button">Buscar</button>
+     
+      </div>  
+      </div>
+      </div> 
+      
+      <div id="resultado_autor" align="center">
+      <div align="center">
+<!--{LISTADO}-->
+<div id="liAutor">
+
+</div>
+
+<!--{DAAA}-->
+
+</div>
+</div>
+</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>CONSULTA AUTORES</h4>
+	</div>
+</div>
+
+
+
+<!--{EDITORIAL}-->
+
+<div data-role="page" id="editor" data-theme="a">
+	<div data-role="header">
+		<h1>EDITORIAL</h1>
+        <div align="center">
+        <a href="#principal" data-role="button" data-icon="libros" data-iconpos="notext" data-inline="true">Menú</a>
+        </div>  
+	</div>
+	<div data-role="content">	
+		 <div align="center">
+         Elegir Editorial:
+         <br>
+		<input type="text" name="txteditor" placeholder="Editorial">
+        <br>
+        <br>
+        <div style="width:30%">
+        <button type="button">Buscar</button>
+        </div>
+      </div>  
+     
+   <div id="resultado_autor" align="center">
+   <!--{}-->
+      <div align="center">
+        <div style="float:left;width:50%">
+        <br>
+        <br>
+          <h2>Autor: <span style="color:blue">{Autor}</span></h2>
+          <hr>
+          
+          <h2>Genero: <span style="color:blue">{Genero}</span></h2>
+          <hr>
+        </div> 
+        <br>
+        <br>
+   
+        <div style="float:left; width:50%" >
+        <h2>Titulo: <span style="color:blue">{Titulo}</span></h2>
+          <hr>
+          <h2>Foto: <span style="color:blue">{Foto}</span></h2>
+          <hr>
+          <img src="recursos/fotos/{ISBN}.JPG" width="50" height="50">
+          
+        </div>
+       
+                <div style="clear:both">
+<hr style="color:#F00; border:double">
+</div>
+     
+      </div>
+      
+    <!--{}-->
+      
+</div>
+
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>CONSULTA EDITORIAL</h4>
+	</div>
+</div>
+<!--{GENERO}-->
+<div data-role="page" id="genero" data-theme="a">
+	<div data-role="header">
+		<h1>GENERO</h1>
+        <div align="center">
+        <a href="#principal" data-role="button" data-icon="libros" data-iconpos="notext" data-inline="true">Menú</a>
+        </div>  
+	</div>
+	<div data-role="content">	
+		 <div align="center">
+         Elige tu Genero:
+         <br>
+		<input type="text" name="txtgenero" placeholder="Genero">
+        <br>
+        <br>
+        <div style="width:30%">
+        <button type="submit">Buscar</button>
+        </div>
+      </div> 
+      
+  <div id="resultado_autor" align="center">
+<!-- aqui se agregan -->
+      <div align="center">
+<div style="float:left;width:50%">
+        <br>
+        <br>  
+         <h2>Genero: <span style="color:blue">{Genero}</span></h2>
+          <hr>
+          
+           <h2>Autor: <span style="color:blue">{Autor}</span></h2>
+        
+          <hr>
+        </div> 
+        <br>
+        <br>
+        <!--{}-->
+        <div style="float:left; width:50%" >
+        <h2>Titulo: <span style="color:blue">{Titulo}</span></h2>
+          <hr>
+          <h2>Foto: <span style="color:blue">{Foto}</span></h2>
+          <hr>
+          <img src="recursos/fotos/{ISBN}.JPG" width="60" height="60">
+          
+        </div>
+        <div style="clear:both">
+<hr style="color:#F00; border:double">
+</div>
+        
+</div>
+
+
+<!-- fin de agreagr-->
+</div>
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>CONSULTA GENERO</h4>
+	</div>
+</div>
+
+<!--{CONSULTA GENERO}-->
+
+<!--{LISTADO}-->
+<div data-role="page" id="listado" data-theme="a">
+	<div data-role="header">
+		<h1>BIBLIOTECA</h1>
+        <div align="center">
+        <a href="#principal" data-role="button" data-icon="libros" data-iconpos="notext" data-inline="true">Menú</a>
+        </div>  
+	</div>
+	<div data-role="content">	
+<!--{LISTADO}-->
+<div id="biblioteca">
+
+</div>
+
+<!--{DAAA}-->
+
+<!--{///LISTADO}-->
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>BIBLIOTECA</h4>
+	</div>
+</div>
+
+<!--{cerramoslistado}-->
+
+    </body>
+
+</html>
