@@ -8,7 +8,7 @@ function buscartodos ()
 	alert("funciobt");
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.182/biblioteca/consultalibros.php"		
+		url: "http://192.168.1.165/biblioteca/consultalibros.php"		
 	}).done (function(msg){
 		alert("resultados");
 		var DatosLibros = JSON.parse(msg);
