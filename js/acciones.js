@@ -60,7 +60,7 @@ $(document).ready(function(e){
 	
 	$.ajax({
 		type:"POST",
-		url: "http://192.168.1.182/biblioteca/consultaAutor.php"		
+		url: "http://192.168.1.165/biblioteca/consultaAutor.php"		
 	}).done (function(msg){
 		var DatosLibros = JSON.parse(msg);
 		if(DatosLibros.datos == 1)
@@ -68,7 +68,7 @@ $(document).ready(function(e){
 			$('#liAutor').empty();
 			for(var i=0;i<DatosLibros.libros.length;i++)
 			{
-				$('#liAutor').append('<div style="width:50%"><h2>Autor: <span style="color:blue">'+DatosLibros.libros[i].Autor+'</span></h2><hr><h2>Titulo: <span style="color:blue">'+DatosLibros.libros[i].Titulo+'</span></h2><hr><h2>Foto: <span style="color:blue">{Foto}</span></h2><img src="http://192.168.1.182/biblioteca/recursos/fotos/'+DatosLibros.libros[i].ISBN+'.JPG" width="230" height="360"></div><div style="clear:both"><hr style="color:#F00; border:double"></div>');
+				$('#liAutor').append('<div style="width:50%"><h2>Autor: <span style="color:blue">'+DatosLibros.libros[i].Autor+'</span></h2><hr><h2>Titulo: <span style="color:blue">'+DatosLibros.libros[i].Titulo+'</span></h2><hr><h2>Foto: <span style="color:blue">{Foto}</span></h2><img src="http://192.168.1.165/biblioteca/recursos/fotos/'+DatosLibros.libros[i].ISBN+'.JPG" width="230" height="360"></div><div style="clear:both"><hr style="color:#F00; border:double"></div>');
 			}
 			
 			
