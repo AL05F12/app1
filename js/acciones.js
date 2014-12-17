@@ -46,6 +46,7 @@ $(document).ready(function(e){
 		});
 		
 		$('#bautor').tap(function(){
+			alert($('#txtautor').val());
 			buscarAutor($('#txtautor').val());
 			
 		});
@@ -57,6 +58,7 @@ $(document).ready(function(e){
 	function buscarAutor (Quien)
 {
 	alert("funcioba");
+	alert(Quien);
 	//datos a mandar
 	datos="Autor="+Quien;
 	$.ajax({
