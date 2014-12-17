@@ -45,22 +45,23 @@ $(document).ready(function(e){
 			$.mobile.changePage("#listado");
 		});
 		
-		$('#buscar_autor').tap(function(){
-			buscarAutor();
-			$.mobile.changePage("#autor");
+		$('#bautor').tap(function(){
+			buscarAutor($('#txtautor').val());
+			
 		});
 	});
 	});
 	
 	
 	
-	function buscarAutor ()
+	function buscarAutor (Quien)
 {
 	//datos a mandar
-	
+	datos="Autor="+Quien;
 	$.ajax({
 		type:"POST",
-		url: "http://192.168.1.165/biblioteca/consultaAutor.php"		
+		url: "http://192.168.1.165/biblioteca/consultaAutor.php",
+		data: datos	
 	}).done (function(msg){
 		var DatosLibros = JSON.parse(msg);
 		if(DatosLibros.datos == 1)
